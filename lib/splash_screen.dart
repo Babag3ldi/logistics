@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:logistics/main.dart';
 
-import 'main_screen.dart';
+import 'flutter_map.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => MainScreen())));
+            context, MaterialPageRoute(builder: (context) => MyWidget())));
   }
 
   @override
@@ -36,20 +36,18 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(
               height: Height * 10,
             ),
-            // CircleAvatar(
-            //                           radius: 150,
-            //                           backgroundColor: Color.fromARGB(255, 81, 13, 207),
-            //                           foregroundImage: AssetImage('assets/logo.jpg'),
-                                       Image.asset(
-              'assets/logo.jpg',
+            Image.asset(
+              'assets/logo1.png',
               height: Height * 40,
               width: Width * 50,
-      
-                                   ),
-            
+            ),
             Text(
               "Logistics",
-              style: TextStyle(fontSize: 30, fontFamily: 'Philosopher', fontWeight: FontWeight.bold, color: Colors.white),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Philosopher',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             SizedBox(
               height: Height * 2,
@@ -58,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 width: Width * 80,
                 child: Center(
                     child: Text(
-                  "expres",
+                  "Maps",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 22, color: Colors.white),
                 ))),

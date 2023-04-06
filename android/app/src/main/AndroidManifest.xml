@@ -10,7 +10,7 @@
   </queries>
 <!-- </manifest> -->
    <application
-        android:label="Logistics"
+        android:label="Logistics Maps"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_share/flutter_share.dart';
+import 'package:logistics/flutter_map.dart';
 import 'package:logistics/main.dart';
 import 'package:logistics/page2.dart';
 
@@ -34,6 +35,27 @@ class Drawer1 extends StatelessWidget {
               color: '1d2225'.toColor(),
             ),
             child: Image.asset('assets/trans.png'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.map_rounded,
+              color: Colors.white,
+            ),
+            title: const Text(
+              'Map',
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MyWidget(),
+                ),
+              );
+            },
+          ),
+          Divider(
+            color: Colors.white,
           ),
           ListTile(
             leading: Icon(
